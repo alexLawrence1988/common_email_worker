@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(cors());
-app.use('/', email);
+app.use('/email', email);
 
 ////////////////////////////////////////////////////////////////////////////
 ///// Start express server on port /////////////////////////////////////////
