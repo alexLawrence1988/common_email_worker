@@ -15,7 +15,7 @@ router.get("/send", async (req, res) => {
 
 router.get("/techpulse/send", async (req, res) => {
   const to = "alexjlawrence88@gmail.com";
-  const subject = "techpulse enquiry";
+  const subject = `techpulse enquiry - ${req.query.subject}`;
   const text = `Enquiry from ${req.query.email}: ${req.query.message}`;
 
   const result = await emailHelper.sendEmailTechPulse(to, text, subject);
